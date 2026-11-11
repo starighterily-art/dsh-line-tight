@@ -1,0 +1,45 @@
+{
+  "name": "dsh-line-tight",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Tighten the chat transcript: markdown line height and paragraph spacing, adjustable from Settings → General.",
+  "license": "MIT",
+  "author": "Starighterily-art",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/starighterily-art/dsh-line-tight.git"
+  },
+  "homepage": "https://github.com/starighterily-art/dsh-line-tight#readme",
+  "bugs": {
+    "url": "https://github.com/starighterily-art/dsh-line-tight/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek",
+    "harness",
+    "line-height",
+    "typography"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ]
+    }
+  }
+}
